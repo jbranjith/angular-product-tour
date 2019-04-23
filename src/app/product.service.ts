@@ -11,14 +11,15 @@ import { MessageService } from './message.service';
 export class ProductService {
   constructor(private messageService: MessageService) { }
 
-  getProducts(): Product[] {
-    this.messageService.add('ProductService: fetched products');
-    return PRODUCTS;
-  }
-
-  /**getProducts(): Observable<Product[]> {
+  getProducts(): Observable<Product[]> {
     this.messageService.add('ProductService: fetched products');
     return of(PRODUCTS);
+  }
+  
+  /**getProducts(): Product[] {
+    this.messageService.add('ProductService: fetched products');
+    return PRODUCTS;
+
   }*/
 
 }

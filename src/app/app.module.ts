@@ -12,7 +12,7 @@ import { MessagesComponent } from './messages/messages.component';
 
 
 @NgModule({
-  imports: [BrowserModule, FormsModule],
+  imports: [BrowserModule, FormsModule, AppRoutingModule],
   declarations: [DashboardComponent,
     AppComponent,
     ProductsComponent,
