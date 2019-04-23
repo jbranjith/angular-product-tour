@@ -1,6 +1,6 @@
 <div *ngIf="prod">
 	<h2>{{prod.name | uppercase}} Details</h2>
-	<div><label>name: <input [(ngModel)]="prod.name" placeholder="name"/> </label><div>
+	<div><label>Name: <input [(ngModel)]="prod.name" placeholder="name"/> </label> &nbsp; <button (click)="save()">SAVE</button><div>
   <br>
   <table border="1">
     <tr><th>ID</th>
@@ -16,4 +16,5 @@
   </table>
 </div>
 <br>
+ 
 <button (click)="goBack()">BACK</button>

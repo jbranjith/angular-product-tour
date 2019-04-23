@@ -15,7 +15,6 @@ export class ProductDetailComponent implements OnInit {
   @Input()
   prod: Product; // change to prod
 
-
   constructor(
     private activatedRoute: ActivatedRoute,
     private productService: ProductService,
@@ -32,5 +31,10 @@ export class ProductDetailComponent implements OnInit {
 
   goBack(): void {
     this.location.back();
+  }
+
+  save(): void {
+    this.productService.updateProduct(this.prod)
+      .subscribe(() => this.goBack());
   }
 }
