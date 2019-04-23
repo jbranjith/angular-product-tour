@@ -7,9 +7,8 @@ import { Product } from '../product';
   templateUrl: './product-detail.component.html',
   styleUrls: ['./product-detail.component.css']
 })
-export class ProductDetailComponent {
+export class ProductDetailComponent  {
 
   @Input()
-  prod: Product;
-
+  prod: Product; // change to prod
 }

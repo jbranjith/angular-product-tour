@@ -19,8 +19,8 @@ export class ProductsComponent implements OnInit {
     this.getProducts();
    }
 
-  onSelect(product: Product): void {
-    this.selectedProduct = product;
+  onSelect(product: Product): void {    
+    this.selectedProduct = product;    
   }
 
   getProducts(): void {
