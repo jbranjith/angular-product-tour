@@ -10,6 +10,6 @@ import { Product } from '../product';
 export class ProductDetailComponent {
 
   @Input()
-  product: Product;
+  prod: Product;
 
 }
