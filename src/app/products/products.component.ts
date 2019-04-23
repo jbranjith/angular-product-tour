@@ -8,9 +8,7 @@ import { ProductService } from '../product.service';
   templateUrl: './products.component.html',
   styleUrls: ['./products.component.css']
 })
-export class ProductsComponent implements OnInit {
-
-  selectedProduct: Product;
+export class ProductsComponent implements OnInit {  
   products: Product[];
 
   constructor(private productService: ProductService) { }
@@ -19,17 +17,18 @@ export class ProductsComponent implements OnInit {
     this.getProducts();
   }
 
-  onSelect(product: Product): void {
-    this.selectedProduct = product;
-  }
-
   getProducts(): void {
     this.productService.getProducts().subscribe(products => this.products = products);
   }
+}
 
-  /**
-   * getProducts(): void {
+/**
+   * 
+   * selectedProduct: Product;
+   * onSelect(product: Product): void {
+    this.selectedProduct = product;
+  } 
+   * 
+   getProducts(): void {
     this.products = this.productService.getProducts();}
    */
-
-}
